@@ -118,9 +118,9 @@ new_exercise(8);
 function login(string $email, string $password) {
     if($email == 'john@example.be' && $password == 'pocahontas') {
         echo 'Welcome John';
-        echo ' Smith <br>';
+        return ' Smith <br>';
     }
-    else echo 'No access <br>';
+    else return 'No access <br>';
 }
 
 //do not change anything below
@@ -138,20 +138,22 @@ function isLinkValid(string $link) {
     $unacceptables = array('https:','.doc','.pdf', '.jpg', '.jpeg', '.gif', '.bmp', '.png');
 
     foreach ($unacceptables as $unacceptable) {
-        if (strpos($link, $unacceptable) == true) {
+        if (str_contains($link, $unacceptable)) {
             return 'Unacceptable Found<br />';
+            var_dump($unacceptables);
         }
     }
     return 'Acceptable<br />';
 }
 //invalid link
-isLinkValid('http://www.google.com/hack.pdf');
+echo isLinkValid('http://www.google.com/hack.pdf');
 //invalid link
-isLinkValid('https://google.com');
+echo isLinkValid('https://google.com');
 //VALID link
-isLinkValid('http://google.com');
+echo isLinkValid('http://google.com');
 //VALID link
-isLinkValid('http://google.com/test.txt');
+echo isLinkValid('http://google.com/test.txt');
+
 
 
 new_exercise(10);

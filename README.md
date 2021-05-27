@@ -1,5 +1,12 @@
 # Title: Debugging PHP
 
+Exercise in debugging PHP code:
+* installing XDebug and installing it in PHPStorm
+* installing the XDebug browser extension in Firefox and Chrome
+* debugging existing code and make it up and running
+
+---
+
 - Repository: `php-debugging`
 - Type of Challenge: `Learning challenge`
 - Duration: `1 day`
